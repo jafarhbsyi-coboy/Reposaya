@@ -1,1 +1,357 @@
-https://github.com/jafarhbsyi-coboy/Reposaya.git
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Creative Studio | Website Profesional</title>
+<meta name="description" content="Jasa pembuatan website profesional untuk UMKM, toko online, restoran dan bisnis. Melayani Indonesia dan internasional.">
+<style>
+:root {
+  --navy:#101d36;
+  --orange:#ff8a32;
+  --light:#f5f7fb;
+  --white:#ffffff;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  font-family:Arial,sans-serif;
+  background:var(--light);
+  color:#263248;
+  line-height:1.6;
+}
+header {
+  background:var(--navy);
+  color:white;
+  padding:17px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.logo {font-size:22px;font-weight:bold}
+.logo span {color:var(--orange)}
+nav {display:flex;gap:18px;flex-wrap:wrap}
+nav a {color:white;text-decoration:none;font-size:14px}
+nav a:hover {color:var(--orange)}
+.lang {
+  border:1px solid var(--orange);
+  background:transparent;color:white;
+  padding:8px 13px;border-radius:20px;cursor:pointer
+}
+.hero {
+  background:linear-gradient(120deg,#101d36,#263e64);
+  color:white;text-align:center;
+  padding:90px 7%;
+}
+.hero h1 {font-size:clamp(32px,5vw,52px);line-height:1.2}
+.hero h1 span {color:var(--orange)}
+.hero p {max-width:700px;margin:20px auto;color:#e0e7f1}
+.btn {
+  display:inline-block;
+  background:var(--orange);
+  color:#fff;text-decoration:none;
+  padding:13px 23px;border-radius:7px;
+  font-weight:bold;margin:8px 5px;
+  border:0;cursor:pointer
+}
+.btn:hover {background:#e96d17}
+.btn.secondary {background:transparent;border:1px solid white}
+section {padding:65px 7%}
+.section-title {text-align:center;margin-bottom:35px}
+.section-title h2 {font-size:30px;color:var(--navy)}
+.section-title p {color:#69758a;margin-top:8px}
+.about {
+  max-width:850px;margin:auto;text-align:center;
+}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card {
+  background:white;padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 20px #17243b0d;
+}
+.card h3 {color:var(--navy);margin:12px 0}
+.icon {font-size:35px}
+.portfolio-card {
+  background:white;border-radius:12px;
+  overflow:hidden;box-shadow:0 5px 20px #17243b12;
+}
+.portfolio-card .preview {
+  height:160px;
+  display:flex;align-items:center;
+  justify-content:center;
+  color:white;font-size:25px;font-weight:bold;
+  background:linear-gradient(135deg,#142b4d,#f28a35);
+}
+.portfolio-card .content {padding:20px}
+.portfolio-card a {color:#e96d17;text-decoration:none;font-weight:bold}
+.pricing {text-align:center}
+.price {
+  font-size:30px;font-weight:bold;
+  color:var(--orange);margin:15px 0
+}
+.price-card ul {list-style:none;text-align:left;margin:20px 0}
+.price-card li {padding:6px 0}
+.price-card li:before {content:"✓ ";color:#16a36a;font-weight:bold}
+.featured {border:2px solid var(--orange)}
+.contact {
+  background:var(--navy);color:white;text-align:center
+}
+.contact h2 {color:white}
+.contact p {margin:12px auto;max-width:650px}
+.contact-form {
+  max-width:550px;margin:25px auto;
+  display:grid;gap:12px;
+}
+.contact-form input,.contact-form textarea {
+  width:100%;padding:14px;border:0;
+  border-radius:7px;font:inherit;
+}
+.contact-form textarea {min-height:110px}
+footer {
+  background:#091326;color:#c8d0dc;
+  text-align:center;padding:25px 10px;
+}
+@media(max-width:650px) {
+  header {justify-content:center}
+  nav {justify-content:center}
+  .hero {padding:65px 6%}
+  section {padding:48px 6%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Web <span>Creative Studio</span></div>
+  <nav>
+    <a href="#home" data-id="navhome">Beranda</a>
+    <a href="#about" data-id="navabout">Tentang</a>
+    <a href="#services" data-id="navservices">Layanan</a>
+    <a href="#portfolio" data-id="navportfolio">Portofolio</a>
+    <a href="#pricing" data-id="navpricing">Harga</a>
+    <a href="#contact" data-id="navcontact">Kontak</a>
+  </nav>
+  <button class="lang" onclick="toggleLanguage()">EN / ID</button>
+</header>
+
+<div class="hero" id="home">
+  <h1 data-id="heroTitle">Kami Membuat <span>Website Profesional</span> untuk Bisnis Anda</h1>
+  <p data-id="heroText">
+    Tingkatkan kepercayaan pelanggan dan kembangkan bisnis Anda
+    dengan website modern, menarik, cepat dan responsif.
+  </p>
+  <a href="#portfolio" class="btn" data-id="heroBtn1">Lihat Portofolio</a>
+  <a href="#contact" class="btn secondary" data-id="heroBtn2">Hubungi Kami</a>
+</div>
+
+<section id="about">
+  <div class="section-title">
+    <h2 data-id="aboutTitle">Tentang Kami</h2>
+  </div>
+  <div class="about">
+    <p data-id="aboutText">
+      Web Creative Studio menyediakan jasa pembuatan website
+      profesional untuk UMKM, toko online, restoran, jasa profesional
+      dan perusahaan kecil. Kami membantu bisnis memiliki identitas
+      digital yang lebih profesional agar dapat menjangkau lebih banyak pelanggan.
+    </p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-title">
+    <h2 data-id="serviceTitle">Layanan Kami</h2>
+    <p data-id="serviceDesc">Solusi digital untuk berbagai kebutuhan bisnis.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🛍️</div>
+      <h3 data-id="s1">Website Toko Online</h3>
+      <p data-id="sd1">Website penjualan produk dengan katalog, keranjang dan pemesanan WhatsApp.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏢</div>
+      <h3 data-id="s2">Website Perusahaan</h3>
+      <p data-id="sd2">Website profil bisnis untuk meningkatkan kepercayaan pelanggan.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🍽️</div>
+      <h3 data-id="s3">Website Restoran</h3>
+      <p data-id="sd3">Website menu makanan, informasi restoran dan pemesanan.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💼</div>
+      <h3 data-id="s4">Website Portofolio</h3>
+      <p data-id="sd4">Website profesional untuk freelancer dan jasa pribadi.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="section-title">
+    <h2 data-id="portfolioTitle">Contoh Portofolio</h2>
+    <p data-id="portfolioDesc">Contoh proyek dan demonstrasi desain website.</p>
+  </div>
+  <div class="cards">
+    <div class="portfolio-card">
+      <div class="preview">Zeinshop313</div>
+      <div class="content">
+        <h3>Online Shop</h3>
+        <p>Contoh toko online dengan katalog produk dan pemesanan WhatsApp.</p>
+        <a href="https://jafarhbsyi-coboy.github.io/Website-toko-online-Ja-far-/" target="_blank">Lihat Website ↗</a>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="preview" style="background:linear-gradient(135deg,#9d477b,#f0a6c8)">Beauty Salon</div>
+      <div class="content">
+        <h3>Beauty Salon Website</h3>
+        <p>Konsep website salon kecantikan dengan layanan dan kontak pelanggan.</p>
+        <span>Konsep demonstrasi</span>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="preview" style="background:linear-gradient(135deg,#8a542c,#e9a75b)">Restaurant</div>
+      <div class="content">
+        <h3>Restaurant Website</h3>
+        <p>Konsep website restoran dengan menu dan informasi pemesanan.</p>
+        <span>Konsep demonstrasi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="section-title">
+    <h2 data-id="pricingTitle">Paket Harga</h2>
+    <p data-id="pricingDesc">Pilih paket sesuai kebutuhan bisnis Anda.</p>
+  </div>
+  <div class="cards">
+    <div class="card price-card">
+      <h3>Basic</h3>
+      <div class="price">Rp1 Juta</div>
+      <ul>
+        <li>Website profil sederhana</li>
+        <li>Desain responsif</li>
+        <li>Informasi bisnis</li>
+        <li>Kontak WhatsApp</li>
+      </ul>
+      <a class="btn" href="#contact">Pilih Paket</a>
+    </div>
+    <div class="card price-card featured">
+      <h3>Professional</h3>
+      <div class="price">Rp2 Juta</div>
+      <ul>
+        <li>Website profesional</li>
+        <li>Desain responsif</li>
+        <li>Halaman layanan</li>
+        <li>Galeri foto</li>
+        <li>Integrasi WhatsApp</li>
+      </ul>
+      <a class="btn" href="#contact">Pilih Paket</a>
+    </div>
+    <div class="card price-card">
+      <h3>Premium</h3>
+      <div class="price">Rp3 Juta</div>
+      <ul>
+        <li>Website toko online</li>
+        <li>Katalog produk</li>
+        <li>Keranjang belanja</li>
+        <li>Checkout WhatsApp</li>
+        <li>Desain premium</li>
+      </ul>
+      <a class="btn" href="#contact">Pilih Paket</a>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:20px;font-size:13px">
+    Harga awal. Biaya domain, hosting berbayar, dan fitur tambahan dapat disesuaikan berdasarkan kebutuhan proyek.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-title">
+    <h2 data-id="contactTitle">Mari Bangun Website Bisnis Anda</h2>
+    <p data-id="contactText">
+      Hubungi kami untuk konsultasi dan pemesanan jasa pembuatan website.
+    </p>
+  </div>
+  <form class="contact-form" onsubmit="sendWhatsApp(event)">
+    <input id="name" type="text" placeholder="Nama Anda" required>
+    <input id="business" type="text" placeholder="Nama bisnis Anda" required>
+    <input id="email" type="email" placeholder="Email Anda">
+    <textarea id="message" placeholder="Ceritakan website yang Anda butuhkan..." required></textarea>
+    <button type="submit" class="btn">Kirim Pesan WhatsApp</button>
+  </form>
+  <p>WhatsApp: 081991391551</p>
+</section>
+
+<footer>
+  <p>© 2026 Web Creative Studio. All Rights Reserved.</p>
+  <p>Professional Website Development Services</p>
+</footer>
+
+<script>
+const phone = "6281991391551";
+let english = false;
+
+function sendWhatsApp(event) {
+  event.preventDefault();
+  const name = document.getElementById("name").value;
+  const business = document.getElementById("business").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const text =
+`Halo Web Creative Studio!
+Nama: ${name}
+Nama bisnis: ${business}
+Email: ${email}
+Kebutuhan website: ${message}
+
+Saya tertarik menggunakan jasa pembuatan website.`;
+
+  window.open(
+    "https://wa.me/" + phone + "?text=" + encodeURIComponent(text),
+    "_blank"
+  );
+}
+
+const translations = {
+  navhome:"Home", navabout:"About", navservices:"Services",
+  navportfolio:"Portfolio", navpricing:"Pricing", navcontact:"Contact",
+  heroTitle:'We Create <span>Professional Websites</span> for Your Business',
+  heroText:"Build customer trust and grow your business with modern, attractive and responsive websites.",
+  heroBtn1:"View Portfolio", heroBtn2:"Contact Us",
+  aboutTitle:"About Us",
+  aboutText:"Web Creative Studio provides professional website development for small businesses, online shops, restaurants, professional services and small companies. We help businesses establish a professional digital identity and reach more customers.",
+  serviceTitle:"Our Services", serviceDesc:"Digital solutions for different business needs.",
+  s1:"Online Store Website", sd1:"Product sales website with catalog, cart and WhatsApp ordering.",
+  s2:"Company Website", sd2:"Business profile website to build customer trust.",
+  s3:"Restaurant Website", sd3:"Food menus, restaurant information and ordering.",
+  s4:"Portfolio Website", sd4:"Professional website for freelancers and personal services.",
+  portfolioTitle:"Our Portfolio", portfolioDesc:"Website project examples and design demonstrations.",
+  pricingTitle:"Pricing Packages", pricingDesc:"Choose a package that suits your business.",
+  contactTitle:"Let's Build Your Business Website",
+  contactText:"Contact us for consultation and website development orders."
+};
+
+function toggleLanguage() {
+  english = !english;
+  document.querySelectorAll("[data-id]").forEach(el => {
+    const key = el.dataset.id;
+    if (english && translations[key]) {
+      el.innerHTML = translations[key];
+    } else {
+      location.reload();
+    }
+  });
+}
+</script>
+</body>
+</html>
